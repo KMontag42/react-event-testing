@@ -1,13 +1,42 @@
-class EventVideoPlayer extends React.Component {
+class EventVideoPlayer extends BaseComponent {
+  // this is how we set state in es6 classes
+  constructor(props) {
+    super(props);
+    this.state = {
+        player: this.props.player
+    };
+    this.onClick = this.onClick.bind(this);
+    this.onChange = this.onChange.bind(this);
+  }
+
+  componentWillMount() {
+    PlayerStore.listen(this.onChange);
+    PlayerActions.initData(this.props);
+  }
+
+  componentWillUnmount() {
+    PlayerStore.unlisten(this.onChange);
+  }
+
+  onChange(state) {
+    console.log(state);
+    this.setState(state);
+  }
+
   render () {
     return (
       <div>
-        <PlayerInformation player={this.props.player}></PlayerInformation>
-        <video className="replay" autoplay controls>
-          <source src={this.props.video}/>
+        <PlayerInformation player={this.state.player}></PlayerInformation>
+        <video src={this.state.player.video} className="replay" autoplay controls>
+          <source src={this.state.player.video}/>
         </video>
+        <div className="btn btn-primary" onClick={this.onClick}>CHANGE PLAYER</div>
       </div>
     );
+  }
+
+  onClick() {
+    PlayerActions.updatePlayer();
   }
 }
 
