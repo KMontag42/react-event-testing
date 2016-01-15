@@ -3,7 +3,7 @@ var PlayerInformation = React.createClass({
     return (
       <div className="playerInformation">
         <div className="avatar">
-          <img src="" alt="playerAvatar"/>
+          <img src={this.props.player.avatar} alt="playerAvatar"/>
         </div>
         <div className="name">{this.props.player.name}</div>
         <div className="score">Score: {this.props.player.score}</div>

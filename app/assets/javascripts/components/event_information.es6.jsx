@@ -25,9 +25,11 @@ class EventInformation extends React.Component {
 
   render () {
     return (
-      <div>
-        <div className="title">{this.state.event.title}</div>
-        <div className="time">{this.state.event.time}</div>
+      <div className="eventInformation">
+        <div className="eventName">
+          <div className="title">{this.state.event.title}</div>
+          <div className="time">{this.state.event.time}</div>
+        </div>
         <hr/>
         <div className="prize">{this.state.event.prize}</div>
         <div className="inPrizes">IN PRIZES</div>

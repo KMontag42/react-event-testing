@@ -24,5 +24,5 @@ class EventStore {
     });
   }
 }
-
+//const EventStore = alt.createStore(EventStore, 'EventStore');
 window.EventStore = window.alt.createStore(EventStore, 'EventStore');

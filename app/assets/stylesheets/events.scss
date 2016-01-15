@@ -4,8 +4,61 @@
 html, body {
   height: 100%;
 }
+.eventLogos {
+  @extend .text-center;
+  .logo {
+    height: 50px;
+    width: 100px;
+  }
+}
 .eventDisplay {
   background-color: #333;
   color: white;
+  height: 100%;
+}
+.eventInformation {
+  height: 250px;
+  .eventName {
+    height: 60px;
+    .title {
+      font-size: 25px;
+    }
+    .time {
+      font-size: 18px;
+    }
+  }
+}
+.eventGame {
+  img {
+    height: 80px;
+    width: 80px;
+  }
+  .gameName {
+    display: inline-block;
+  }
+}
+.playerInformation {
+  .avatar {
+    display: inline-block;
+    img {
+      height: 40px;
+      width: 40px;
+    }
+  }
+  .name {
+    padding-left: 5px;
+    display: inline-block;
+  }
+  .score {
+    padding-left: 25px;
+    display: inline-block;
+  }
+  .date {
+    padding-left: 25px;
+    display: inline-block;
+  }
+}
+video.replay {
+  width: 100%;
   height: 100%;
 }

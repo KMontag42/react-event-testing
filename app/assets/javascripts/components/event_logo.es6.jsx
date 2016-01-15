@@ -1,9 +1,10 @@
 class EventLogo extends React.Component {
   render () {
     return (
-      <div>
-        <img src="" alt="skillz logo"/>
-        <img src={this.props.logo} alt="event logo"/>
+      <div className="eventLogos">
+        <img src="" alt="skillz logo" className="logo"/> |
+        <img src={this.props.logo} alt="event logo" className="logo"/>
+        <hr/>
       </div>
     );
   }
