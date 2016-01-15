@@ -14,6 +14,11 @@ class EventVideoPlayer extends BaseComponent {
     PlayerActions.initData(this.props);
   }
 
+  componentDidMount() {
+    $('video.replay').on('ended', function(e) {
+      setTimeout(PlayerActions.updatePlayer, 2000);
+    })
+  }
   componentWillUnmount() {
     PlayerStore.unlisten(this.onChange);
   }
@@ -27,7 +32,7 @@ class EventVideoPlayer extends BaseComponent {
     return (
       <div>
         <PlayerInformation player={this.state.player}></PlayerInformation>
-        <video src={this.state.player.video} className="replay" autoplay controls>
+        <video src={this.state.player.video} className="replay" autoPlay controls>
           <source src={this.state.player.video}/>
         </video>
         <div className="btn btn-primary" onClick={this.onClick}>CHANGE PLAYER</div>
