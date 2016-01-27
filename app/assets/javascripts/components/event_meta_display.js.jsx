@@ -6,7 +6,11 @@ var EventMetaDisplay = React.createClass({
   render: function() {
     return (
       <div className="eventMetaDisplay">
-        <img src="" alt="HOW TO SIGN UP"/>
+        <h2>How to Play</h2>
+        <ol>
+          <li>Download [GameName] from the App Store</li>
+          <li></li>
+        </ol>
       </div>
     );
   }

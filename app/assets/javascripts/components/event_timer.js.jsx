@@ -5,7 +5,7 @@ var EventTimer = React.createClass({
 
   render: function() {
     return (
-      <div className="eventTimer">
+      <div className="eventTimer text-center">
         Tournament Begins In: <b>00:25:45</b>
       </div>
     );

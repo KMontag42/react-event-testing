@@ -32,9 +32,7 @@ class EventInformation extends React.Component {
         </div>
         <hr/>
         <div className="prize">{this.state.event.prize}</div>
-        <div className="inPrizes">IN PRIZES</div>
-        <div className="guaranteed">GUARANTEED</div>
-        <div onClick={this.onClick} className="btn btn-success">CHANGE ME</div>
+        <div className="inPrizes">IN PRIZES <br/> GUARANTEED</div>
       </div>
     );
   }

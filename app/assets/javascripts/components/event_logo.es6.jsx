@@ -4,7 +4,6 @@ class EventLogo extends React.Component {
       <div className="eventLogos">
         <img src="" alt="skillz logo" className="logo"/> |
         <img src={this.props.logo} alt="event logo" className="logo"/>
-        <hr/>
       </div>
     );
   }

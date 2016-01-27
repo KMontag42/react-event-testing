@@ -32,9 +32,11 @@ class EventVideoPlayer extends BaseComponent {
     return (
       <div>
         <PlayerInformation player={this.state.player}></PlayerInformation>
-        <video src={this.state.player.video} className="replay" autoPlay controls>
-          <source src={this.state.player.video}/>
-        </video>
+        <div className="video-container">
+          <video src={this.state.player.video} className="replay" height="500" controls>
+            <source src={this.state.player.video}/>
+          </video>
+        </div>
         <div className="btn btn-primary" onClick={this.onClick}>CHANGE PLAYER</div>
       </div>
     );
