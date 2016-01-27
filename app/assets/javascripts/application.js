@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require alt.min
+//= require moment
+//= require jquery.countdown.min
 //= require react
 //= require react_ujs
 //= require components
